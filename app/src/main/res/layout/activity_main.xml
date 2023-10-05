@@ -15,11 +15,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="오늘 근무"
-        android:textSize="32dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="오늘 근무"
+            android:textSize="32dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -27,25 +27,25 @@
             android:text="09.12(화)"
             android:textSize="14dp"
             android:layout_marginBottom="6dp"/>
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:gravity="center_vertical">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-<!--            <View-->
-<!--                android:layout_width="6dp"-->
-<!--                android:layout_height="6dp"-->
-<!--                android:background="#00A3FF"/>-->
+            <View
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@drawable/radius"/>
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="오전 반차 14:00 ~ 18:00"-->
-<!--                android:paddingLeft="6dp"-->
-<!--                />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자동출근 중"
+                android:paddingLeft="6dp"
+                />
 
-<!--        </LinearLayout>-->
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,24 +57,369 @@
             <View
                 android:layout_width="6dp"
                 android:layout_height="6dp"
-                android:background="#00A3FF"/>
+                android:background="@drawable/radius"/>/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="자동출근 중"
+                android:text="오전 반차 14:00 ~ 18:00"
                 android:paddingLeft="6dp"
                 />
 
         </LinearLayout>
 
-        <View
+        <FrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="111dp"
-            >
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_gravity="center">
 
 
-        </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="출근시간"
+                        android:textSize="16dp"
+                        android:textColor="#848484"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="출근시간"
+                        android:textSize="24dp"
+                        android:textColor="#1E3449"/>
+
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="39dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/arrow"
+                    android:layout_margin="20dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="퇴근시간"
+                        android:textSize="16dp"
+                        android:textColor="#848484"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="퇴근시간"
+                        android:textSize="24dp"
+                        android:textColor="#1E3449"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="출근하기"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/buttonradius"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이번 주 근무기록"
+            android:textStyle="bold"
+            android:layout_marginTop="56dp"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="근무기록 보기 >"
+            android:textStyle="normal"
+            android:textSize="12dp"
+            android:layout_marginBottom="20dp"
+            />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="65dp"
+            android:orientation="vertical"
+            android:background="@drawable/smallbox"
+            android:gravity="center"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="근무"
+                android:layout_marginBottom="4dp"
+                android:textSize="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="없음"
+                android:textSize="10dp"
+                />
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="65dp"
+                android:orientation="vertical"
+                android:background="@drawable/smallbox"
+                android:gravity="center"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="월"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="09:00"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="10dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18:00"
+                    android:textSize="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="65dp"
+                android:orientation="vertical"
+                android:background="@drawable/smallbox"
+                android:gravity="center"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="화"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="09:00"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="10dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18:00"
+                    android:textSize="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="65dp"
+                android:orientation="vertical"
+                android:background="@drawable/smallbox"
+                android:gravity="center"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="수"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="09:00"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="10dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18:00"
+                    android:textSize="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="65dp"
+                android:orientation="vertical"
+                android:background="@drawable/smallbox"
+                android:gravity="center"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="목"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="09:00"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="10dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18:00"
+                    android:textSize="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="65dp"
+                android:orientation="vertical"
+                android:background="@drawable/smallbox"
+                android:gravity="center"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="금"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="09:00"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="10dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18:00"
+                    android:textSize="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="65dp"
+                android:orientation="vertical"
+                android:background="@drawable/smallbox"
+                android:gravity="center"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="토"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="근무"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="10dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="없음"
+                    android:textSize="10dp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+</ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="28dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="일정 +"
+            />
+
+
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#F8F9FA"
+            />
 
 
     </LinearLayout>
